@@ -17,12 +17,17 @@ let started = false;
 
 function buildPoints() {
   for (const person of people) {
-    const marker = document.createElement("span");
+    const marker = document.createElement("button");
     marker.className = "hotspot";
+    marker.type = "button";
     marker.textContent = person.id;
     marker.style.left = `${person.x}%`;
     marker.style.top = `${person.y}%`;
-    marker.setAttribute("aria-hidden", "true");
+    marker.setAttribute("aria-label", `${person.id}. ${person.name}`);
+    marker.addEventListener("click", (event) => {
+      event.stopPropagation();
+      showPerson(person.id);
+    });
     pointsLayer.appendChild(marker);
   }
 }
@@ -49,7 +54,7 @@ function showPerson(personId) {
 function targetFound(index) {
   clearTimeout(lostTimer);
   activeTarget = index;
-  setAligned(true, index === 0 ? "Pintura reconhecida — pontos alinhados" : "Personagem reconhecido");
+  setAligned(true, index === 0 ? "Pintura reconhecida — toque em um número" : "Personagem reconhecido");
   if (index === 0) {
     hideRecognition();
     pointsLayer.classList.add("is-visible");
