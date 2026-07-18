@@ -19,9 +19,8 @@ navegador solicitar.
 
 RECONHECIMENTO
 A página da câmera usa MindAR. Ao reconhecer a pintura inteira, a moldura fica
-verde e os pontos são exibidos. Ao aproximar um dos doze retratados fornecidos
-como referência, aparece somente a biografia correspondente. Jesus permanece
-identificado no modo da pintura completa e no guia manual.
+verde e os pontos são exibidos. Ao aproximar qualquer um dos treze retratados,
+incluindo Jesus, aparece somente a biografia correspondente.
 
 GABARITO
 Os 13 nomes e a numeração seguem o gabarito fornecido em 18/07/2026.

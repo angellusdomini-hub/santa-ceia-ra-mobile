@@ -15,7 +15,7 @@ const people = [
   {id:13,name:"Tupã Paraná Nicolau (Judas Iscariotes)",x:7.2,y:26,text:"Nascido em Nova Fátima em 1950, foi um artista autodidata de ascendência libanesa, conhecido por pinturas comerciais, fachadas e painéis. Realizou a Santa Ceia entre 1998 e 2000 e escolheu retratar a si mesmo como Judas, recordando a fragilidade humana e a necessidade de conversão."}
 ];
 
-const targetToPerson = {1:2,2:3,3:4,4:5,5:6,6:7,7:8,8:9,9:10,10:11,11:12,12:13};
+const targetToPerson = {1:1,2:2,3:3,4:4,5:5,6:6,7:7,8:8,9:9,10:10,11:11,12:12,13:13};
 window.SantaCeiaPeople = people;
 window.SantaCeiaTargetToPerson = targetToPerson;
 })();

@@ -11,8 +11,21 @@
 <body data-page="people">
   <header class="page-header"><a class="back-link" href="./index.html" aria-label="Voltar ao início">‹</a><div><p class="kicker">Guia interativo</p><h1>Personagens</h1></div></header>
   <main class="compact-page">
-    <section class="numbered-reference" aria-labelledby="map-title">
-      <div class="reference-heading"><div><p class="kicker">Consulta sem câmera</p><h2 id="map-title">Gabarito numerado</h2></div><a href="./assets/gabarito-personagens.jpeg" target="_blank" rel="noopener">Ampliar imagem</a></div>
+    <div class="guide-tabs" role="tablist" aria-label="Modo de consulta">
+      <button class="guide-tab is-active" id="interactiveTab" type="button" role="tab" aria-selected="true" aria-controls="interactiveView">Mapa clicável</button>
+      <button class="guide-tab" id="referenceTab" type="button" role="tab" aria-selected="false" aria-controls="referenceView">Gabarito original</button>
+    </div>
+    <section class="guide-panel" id="interactiveView" role="tabpanel" aria-labelledby="interactiveTab">
+      <div class="painting-card">
+        <div class="painting-stage">
+          <img src="./assets/pintura-santa-ceia.jpg" alt="Pintura mural A Santa Ceia com treze botões numerados">
+          <div id="guideHotspots"></div>
+        </div>
+      </div>
+      <p class="guide-hint">Toque em um número para consultar o personagem.</p>
+    </section>
+    <section class="guide-panel numbered-reference" id="referenceView" role="tabpanel" aria-labelledby="referenceTab" hidden>
+      <div class="reference-heading"><div><p class="kicker">Consulta sem câmera</p><h2>Gabarito numerado</h2></div><a href="./assets/gabarito-personagens.jpeg" target="_blank" rel="noopener">Ampliar imagem</a></div>
       <a class="reference-image" href="./assets/gabarito-personagens.jpeg" target="_blank" rel="noopener" aria-label="Abrir o gabarito numerado em tamanho completo"><img src="./assets/gabarito-personagens.jpeg" alt="Gabarito da pintura A Santa Ceia com os treze personagens numerados e identificados"><span>Toque na imagem para ampliar</span></a>
     </section>
     <label class="person-picker">Escolha um retratado<select id="personSelect" aria-label="Escolha um personagem"></select></label>

@@ -83,10 +83,13 @@ async function startCamera() {
   startButton.disabled = true;
   startButton.textContent = "Preparando reconhecimento…";
   try {
-    if (!window.isSecureContext) {
+    if (window.location.protocol === "file:" || !window.isSecureContext) {
       status.textContent = "Abrindo a versão segura…";
       window.location.href = "https://angellusdomini-hub.github.io/santa-ceia-ra-mobile/camera.html";
       return;
+    }
+    if (!navigator.mediaDevices?.getUserMedia) {
+      throw new Error("Este navegador não disponibiliza acesso à câmera.");
     }
     const system = scene.systems["mindar-image-system"];
     if (!system) throw new Error("O reconhecimento ainda não terminou de carregar. Tente novamente em alguns segundos.");
@@ -96,11 +99,15 @@ async function startCamera() {
     stopButton.hidden = false;
     setAligned(false, "Procurando a pintura…");
   } catch (error) {
+    let messageText = error.message || "Não foi possível abrir a câmera.";
+    if (error.name === "NotAllowedError") messageText = "A permissão da câmera foi negada. Autorize o acesso nas configurações do navegador.";
+    if (error.name === "NotFoundError") messageText = "Nenhuma câmera foi encontrada neste aparelho.";
+    if (error.name === "NotReadableError") messageText = "A câmera está sendo usada por outro aplicativo.";
     startButton.disabled = false;
     startButton.textContent = "Tentar novamente";
-    status.textContent = error.message || "Não foi possível abrir a câmera.";
+    status.textContent = messageText;
     const message = startPanel.querySelector("p");
-    message.textContent = `${error.message || "Não foi possível abrir a câmera."} Você pode continuar pelo guia manual.`;
+    message.textContent = `${messageText} Você pode continuar pelo guia manual.`;
   }
 }
 
