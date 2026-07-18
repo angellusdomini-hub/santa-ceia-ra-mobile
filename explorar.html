@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f6f0e6">
+  <meta name="description" content="Guia dos personagens retratados na pintura A Santa Ceia.">
+  <title>A Santa Ceia — personagens</title>
+  <link rel="stylesheet" href="./assets/site.css">
+</head>
+<body data-page="people">
+  <header class="page-header"><a class="back-link" href="./index.html" aria-label="Voltar ao início">‹</a><div><p class="kicker">Guia interativo</p><h1>Personagens</h1></div></header>
+  <main class="compact-page">
+    <label class="person-picker">Escolha um retratado<select id="personSelect" aria-label="Escolha um personagem"></select></label>
+    <section class="painting-card" aria-label="Pintura com pontos interativos">
+      <div class="painting-stage"><img src="./assets/pintura-santa-ceia.jpg" alt="Pintura mural A Santa Ceia"><div id="guideHotspots"></div></div>
+    </section>
+    <article class="bio-card" aria-live="polite">
+      <span class="bio-number" id="bioNumber">1</span>
+      <div><h2 id="bioName">Jesus Cristo</h2><p id="bioText"></p></div>
+    </article>
+    <p class="source-note">Biografias resumidas do livro <em>Santuário Divino Espírito Santo — A Santa Ceia</em>, de João Paulo da Rocha.</p>
+  </main>
+  <script src="./assets/common.js"></script><script src="./assets/people.js"></script><script src="./assets/explore.js"></script>
+</body>
+</html>

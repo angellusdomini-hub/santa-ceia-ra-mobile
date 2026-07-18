@@ -1,11 +1,14 @@
 SANTA CEIA — VERSÃO MOBILE
 
 ARQUIVOS
-- index.html: aplicativo completo.
-- assets/pintura-santa-ceia.jpg: imagem usada na experiência.
+- index.html: página inicial.
+- camera.html: reconhecimento da pintura e dos personagens.
+- explorar.html: guia manual dos personagens.
+- sobre.html: história, ficha técnica e sentido litúrgico.
+- assets: estilos, informações, fotografia e alvos de reconhecimento.
 
 TESTE SEM CÂMERA
-Abra o index.html e toque em “Explorar a obra”. O guia dos 13 personagens
+Abra o index.html e escolha “Ver personagens”. O guia dos 13 personagens
 funciona mesmo quando o arquivo é aberto diretamente no navegador.
 
 TESTE COM CÂMERA NO CELULAR
@@ -14,10 +17,11 @@ assets para a raiz de um site com HTTPS, como o GitHub Pages, e abra o endereço
 publicado no Chrome (Android) ou Safari (iPhone). Autorize a câmera quando o
 navegador solicitar.
 
-IMPORTANTE
-Esta é uma experiência de sobreposição manual. Os pontos são exibidos depois
-que a pessoa alinha a pintura na moldura. O arquivo já contém um ponto de
-integração comentado para uma futura versão com reconhecimento MindAR.
+RECONHECIMENTO
+A página da câmera usa MindAR. Ao reconhecer a pintura inteira, a moldura fica
+verde e os pontos são exibidos. Ao aproximar um dos doze retratados fornecidos
+como referência, aparece somente a biografia correspondente. Jesus permanece
+identificado no modo da pintura completa e no guia manual.
 
 GABARITO
 Os 13 nomes e a numeração seguem o gabarito fornecido em 18/07/2026.

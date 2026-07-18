@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#050505">
+  <meta name="description" content="Reconhecimento dos personagens da pintura A Santa Ceia pela câmera.">
+  <title>A Santa Ceia — câmera</title>
+  <link rel="stylesheet" href="./assets/site.css">
+  <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.5/dist/mindar-image.prod.js"></script>
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+</head>
+<body class="camera-page" data-page="camera">
+  <main class="ar-shell" id="arShell">
+    <a-scene id="arScene" class="ar-scene" embedded
+      mindar-image="imageTargetSrc: ./assets/santa-ceia-targets.mind; autoStart: false; maxTrack: 1; warmupTolerance: 5; missTolerance: 10; uiLoading: no; uiScanning: no; uiError: no"
+      color-space="sRGB" renderer="colorManagement: true; physicallyCorrectLights: true; alpha: true"
+      vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+      <a-entity mindar-image-target="targetIndex: 0" data-target="0"></a-entity>
+      <a-entity mindar-image-target="targetIndex: 1" data-target="1"></a-entity>
+      <a-entity mindar-image-target="targetIndex: 2" data-target="2"></a-entity>
+      <a-entity mindar-image-target="targetIndex: 3" data-target="3"></a-entity>
+      <a-entity mindar-image-target="targetIndex: 4" data-target="4"></a-entity>
+      <a-entity mindar-image-target="targetIndex: 5" data-target="5"></a-entity>
+      <a-entity mindar-image-target="targetIndex: 6" data-target="6"></a-entity>
+      <a-entity mindar-image-target="targetIndex: 7" data-target="7"></a-entity>
+      <a-entity mindar-image-target="targetIndex: 8" data-target="8"></a-entity>
+      <a-entity mindar-image-target="targetIndex: 9" data-target="9"></a-entity>
+      <a-entity mindar-image-target="targetIndex: 10" data-target="10"></a-entity>
+      <a-entity mindar-image-target="targetIndex: 11" data-target="11"></a-entity>
+      <a-entity mindar-image-target="targetIndex: 12" data-target="12"></a-entity>
+    </a-scene>
+
+    <div class="camera-toolbar"><a href="./index.html" class="camera-icon" aria-label="Sair da câmera">×</a><p id="scanStatus" role="status" aria-live="polite">Câmera desligada</p><button id="stopCamera" class="camera-icon" type="button" aria-label="Parar câmera" hidden>■</button></div>
+    <div class="scan-frame" id="scanFrame"><span class="scan-corner scan-corner--tl"></span><span class="scan-corner scan-corner--tr"></span><span class="scan-corner scan-corner--bl"></span><span class="scan-corner scan-corner--br"></span><div id="arPoints" class="ar-points"></div><p class="scan-label" id="scanLabel">Enquadre a pintura ou aproxime um personagem</p></div>
+
+    <section class="camera-start" id="cameraStart">
+      <div class="camera-start__card"><span class="camera-start__icon" aria-hidden="true">◎</span><h1>Reconhecer a obra</h1><p>Aponte para a pintura inteira para alinhar os pontos ou aproxime um dos retratados para ver somente sua biografia.</p><button id="startCamera" class="primary-button" type="button">Iniciar câmera</button><a href="./explorar.html">Prefiro usar o guia manual</a></div>
+    </section>
+
+    <article class="recognition-card" id="recognitionCard" aria-live="polite" hidden><p class="kicker" id="recognitionNumber"></p><h2 id="recognitionName"></h2><p id="recognitionText"></p><button id="closeRecognition" type="button">Recolher</button></article>
+  </main>
+  <script src="./assets/common.js"></script><script src="./assets/people.js"></script><script src="./assets/camera.js"></script>
+</body>
+</html>
