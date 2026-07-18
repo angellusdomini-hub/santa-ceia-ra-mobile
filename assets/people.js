@@ -1,3 +1,4 @@
+(() => {
 const people = [
   {id:1,name:"Jesus Cristo",x:51.5,y:33.5,text:"Centro da composição e sentido da obra. A Santa Ceia recorda sua última refeição com os discípulos, a instituição da Eucaristia e o mandamento do amor. Sua posição diante do altar liga a cena pintada à celebração de cada missa."},
   {id:2,name:"Frei Henrique de Paese",x:29.5,y:47,text:"Capuchinho italiano conhecido na cidade como Frei Henrique de Treviso. Ordenado sacerdote em 1930, chegou ao Brasil em 1931 e passou por Ribeirão do Pinhal em 1954. É lembrado por sua simplicidade franciscana e pelo trabalho missionário no Norte Pioneiro."},
@@ -17,3 +18,4 @@ const people = [
 const targetToPerson = {1:2,2:3,3:4,4:5,5:6,6:7,7:8,8:9,9:10,10:11,11:12,12:13};
 window.SantaCeiaPeople = people;
 window.SantaCeiaTargetToPerson = targetToPerson;
+})();

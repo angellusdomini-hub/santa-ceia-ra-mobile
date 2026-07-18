@@ -11,10 +11,11 @@
 <body data-page="people">
   <header class="page-header"><a class="back-link" href="./index.html" aria-label="Voltar ao início">‹</a><div><p class="kicker">Guia interativo</p><h1>Personagens</h1></div></header>
   <main class="compact-page">
-    <label class="person-picker">Escolha um retratado<select id="personSelect" aria-label="Escolha um personagem"></select></label>
-    <section class="painting-card" aria-label="Pintura com pontos interativos">
-      <div class="painting-stage"><img src="./assets/pintura-santa-ceia.jpg" alt="Pintura mural A Santa Ceia"><div id="guideHotspots"></div></div>
+    <section class="numbered-reference" aria-labelledby="map-title">
+      <div class="reference-heading"><div><p class="kicker">Consulta sem câmera</p><h2 id="map-title">Gabarito numerado</h2></div><a href="./assets/gabarito-personagens.jpeg" target="_blank" rel="noopener">Ampliar imagem</a></div>
+      <a class="reference-image" href="./assets/gabarito-personagens.jpeg" target="_blank" rel="noopener" aria-label="Abrir o gabarito numerado em tamanho completo"><img src="./assets/gabarito-personagens.jpeg" alt="Gabarito da pintura A Santa Ceia com os treze personagens numerados e identificados"><span>Toque na imagem para ampliar</span></a>
     </section>
+    <label class="person-picker">Escolha um retratado<select id="personSelect" aria-label="Escolha um personagem"></select></label>
     <article class="bio-card" aria-live="polite">
       <span class="bio-number" id="bioNumber">1</span>
       <div><h2 id="bioName">Jesus Cristo</h2><p id="bioText"></p></div>

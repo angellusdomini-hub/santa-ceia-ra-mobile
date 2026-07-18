@@ -83,7 +83,11 @@ async function startCamera() {
   startButton.disabled = true;
   startButton.textContent = "Preparando reconhecimento…";
   try {
-    if (!window.isSecureContext) throw new Error("A câmera exige uma página HTTPS.");
+    if (!window.isSecureContext) {
+      status.textContent = "Abrindo a versão segura…";
+      window.location.href = "https://angellusdomini-hub.github.io/santa-ceia-ra-mobile/camera.html";
+      return;
+    }
     const system = scene.systems["mindar-image-system"];
     if (!system) throw new Error("O reconhecimento ainda não terminou de carregar. Tente novamente em alguns segundos.");
     await system.start();
